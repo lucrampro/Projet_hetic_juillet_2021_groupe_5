@@ -1,5 +1,4 @@
 import { ButtonComponent, InputComponent, PeripheriqueCard } from './components'
-import './App.css';
 import './assets/styles/colors.scss'
 function App() {
   return (

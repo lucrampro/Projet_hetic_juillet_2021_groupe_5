@@ -1,8 +1,10 @@
+@import './colors.scss';
+
 .peripherique--card {
   height: 405px;
   width: 310px;
   border-radius: 20px;
-  background-color: #f5f5f5;
+  background-color: $dark-white;
   display: flex;
   align-items: center;
   justify-content: center;
