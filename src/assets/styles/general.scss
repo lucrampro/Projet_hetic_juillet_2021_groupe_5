@@ -1,6 +1,11 @@
-$t-xl: 30px, bold;
-$t-lg: 18px, bold;
+$t-xl: 30px;
+$t-lg: 18px;
 $t-lg-regular: 18px;
 $t-ml-light: 14px;
 $t-ml-semibold: 14px;
 $t-md: 12px;
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+}

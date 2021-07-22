@@ -1,11 +1,11 @@
-import { Login } from './components'
-import './assets/styles/colors.scss'
+import { Login, Home } from './components'
+import './App.scss'
 function App() {
   return (
     <div className="App">
       
-      <Login />
-      
+      {/* <Login /> */}
+      <Home/>
     </div>
   );
 }
