@@ -14,11 +14,11 @@ const PeripheriqueCard = (props) => {
   }
 
   return (
-    <div className="peripherique--card">
+    <div className="peripherique--card" id={props.id} onClick={goToDetailsPage}>
       {/* <img src={require(`../assets/imgs/mailbox_node.png`)} alt="" srcSet=""/> */}
       <img src={`/imgs/nodes/${props.img}.png`} alt="" srcSet=""/>
       <h2>{props.title ? props.title : "Default Title"}</h2>
-      <button onClick={goToDetailsPage}>Voir</button>
+      <button>Voir</button>
     </div>
   );
 }

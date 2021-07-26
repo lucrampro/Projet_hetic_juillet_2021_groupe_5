@@ -22,5 +22,14 @@
 
   .peripherique--card {
     margin: 10px 0px;
+    &:active{
+      background-color: #4B80E8;
+      color: white;
+    }
   }
+}
+
+// DISPLAY NONE FOR THE MOMENT
+#stairs, #door{
+  display: none;
 }
