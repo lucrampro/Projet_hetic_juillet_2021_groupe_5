@@ -3,11 +3,13 @@ import '../assets/styles/login.scss'
 // import { InputComponent } from '../components'
 import { useHistory } from 'react-router-dom'
 import { firebase } from '../firebase'
-import { userInfoContext} from '../store'
+import { userInfoContext, nameContext} from '../store'
 
 const Login = () => {
-  const { setuserInfo }  = useContext(userInfoContext)
+  const { setuserInfo }  = useContext(userInfoContext);
+
   const history = useHistory();
+
   const [user_name, setuser_name] = useState('');
   const [password, setpassword] = useState('');
 
@@ -24,6 +26,7 @@ const Login = () => {
         .doc(uid)
         .get()
         .then(firestoreDocument => {
+
             
             if (!firestoreDocument.exists) {
             alert("User does not exist anymore.")
@@ -48,7 +51,7 @@ const Login = () => {
     <div className="login--page">
       <h1>SecuHome</h1>
       <p>Veuillez vous identifiez pour accéder à la plateforme</p>
-      <input type="text" placeholder="toto@toto.com" onChange={ e => setuser_name(e.target.value)}/>
+      <input type="text" placeholder="toto@toto.com" onChange={ e => {setuser_name(e.target.value)}}/>
       <input type="password" placeholder="mot de passe" onChange={e => setpassword(e.target.value)} name="" id=""/>
       <button onClick={login}>Valider</button>
     </div>
