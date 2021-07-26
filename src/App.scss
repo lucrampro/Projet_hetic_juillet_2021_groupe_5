@@ -4,8 +4,13 @@
 .App {
   color: $grey;
 
-  h1 {
-    font: $t-xl;
-    color: $blue;
-  }
+}
+
+h1 {
+  font: $t-xl;
+  color: $blue;
+}
+
+button {
+  color: $grey;
 }
