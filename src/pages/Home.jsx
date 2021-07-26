@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
+// STORE
+import { userInfoContext} from '../store'
 // ASSETS
 import '../assets/styles/home.scss';
 import notif_icon from '../assets/imgs/notification_icon.png';
@@ -6,6 +8,13 @@ import notif_icon from '../assets/imgs/notification_icon.png';
 import {PeripheriqueCard} from '../components'
 
 const Home = () => {
+
+  const {userInfo} = useContext(userInfoContext)
+
+  useEffect(() => {
+    console.log(userInfo);
+    
+  }, [userInfo]);
   return (
     <div className="home">
       <header>

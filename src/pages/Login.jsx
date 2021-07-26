@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import '../assets/styles/login.scss'
 // import { InputComponent } from '../components'
 import { useHistory } from 'react-router-dom'
 import { firebase } from '../firebase'
-const Login = () => {
+import { userInfoContext} from '../store'
 
+const Login = () => {
+  const { setuserInfo }  = useContext(userInfoContext)
   const history = useHistory();
   const [user_name, setuser_name] = useState('');
   const [password, setpassword] = useState('');
@@ -32,8 +34,10 @@ const Login = () => {
             return;
             }
             const user = firestoreDocument.data()
-            console.log(user)
+            setuserInfo(user)
+            // ici 
             history.push('/accueil');
+             
             })
         .catch(error => { console.error(error) }); 
       })
