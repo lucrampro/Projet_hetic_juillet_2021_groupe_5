@@ -35,7 +35,7 @@ const Login = () => {
             console.log(user)
             history.push('/accueil');
             })
-        .catch(error => { console.error(error) });
+        .catch(error => { console.error(error) }); 
       })
     .catch(error => {
       console.error(error)
