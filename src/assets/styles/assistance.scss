@@ -1,0 +1,17 @@
+@import './colors.scss';
+@import './general.scss';
+
+.assistance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  p {
+    text-align: center;
+  }
+  .number {
+    font: $t-xl;
+    color: $blue;
+  }
+}
