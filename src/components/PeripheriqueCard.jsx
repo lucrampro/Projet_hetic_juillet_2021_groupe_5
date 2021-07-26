@@ -3,8 +3,17 @@ import React from 'react';
 import '../assets/styles/peripherique-card.scss'
 // IMG
 import mailbox_node_img from '../assets/imgs/mailbox_node.png'
+import { useHistory } from 'react-router-dom'
+
 
 const PeripheriqueCard = (props) => {
+
+  const history = useHistory();
+
+  const goToDetails = () => {
+    history.push('/details')
+  }
+
   return (
     <div className="peripherique--card">
       <img src={mailbox_node_img} alt="" srcSet=""/>
