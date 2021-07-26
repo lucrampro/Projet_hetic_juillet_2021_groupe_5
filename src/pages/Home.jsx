@@ -12,7 +12,7 @@ const Home = () => {
   const {userInfo} = useContext(userInfoContext)
 
   useEffect(() => {
-    console.log(userInfo);
+    console.log(userInfo.nodes);
     
   }, [userInfo]);
   return (
@@ -22,7 +22,13 @@ const Home = () => {
         <img src={notif_icon} alt="" srcSet=""/>
       </header>
       <p>Mes objets connectés</p>
-      <PeripheriqueCard />
+      {
+        Object.keys(userInfo.nodes).map( function (value, index) {
+          console.log(userInfo.nodes[value].name, index)
+          return <PeripheriqueCard key={index} title={userInfo.nodes[value].name} img={userInfo.nodes[value].name_img}/>
+        })
+      }
+      
     </div>
   );
 }

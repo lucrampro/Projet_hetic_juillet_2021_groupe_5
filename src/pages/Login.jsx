@@ -16,9 +16,7 @@ const Login = () => {
     .auth()
     .signInWithEmailAndPassword(user_name, password)
     .then(response  => {
-        console.log(response.user);
-        console.log(`username: ${user_name}`);
-        console.log(`password: ${password}`);
+
         
         const uid = response.user.uid
         const usersRef = firebase.firestore().collection('users')
@@ -26,7 +24,6 @@ const Login = () => {
         .doc(uid)
         .get()
         .then(firestoreDocument => {
-            console.log(firestoreDocument);
             
             if (!firestoreDocument.exists) {
             alert("User does not exist anymore.")

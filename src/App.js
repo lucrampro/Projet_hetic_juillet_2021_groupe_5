@@ -11,10 +11,8 @@ function App() {
     <userInfoContext.Provider value={{userInfo ,setuserInfo}}>
       <Router>
 
-        <Route path="/connexion" exact component={Login}/>
+        <Route path="/" exact component={Login}/>
         <Route path="/accueil" exact component={Home}/>
-      <Login />
-      {/* <Home/> */}
       </Router>
     </userInfoContext.Provider>
     </div>
