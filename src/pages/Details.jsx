@@ -2,7 +2,11 @@ import React, {useContext, useEffect} from 'react';
 // STYLES
 import '../assets/styles/details.scss'
 // STORE
-import { userInfoContext} from '../store'
+import { userInfoContext } from '../store'
+
+//COMPONENTS
+import {BinDetails} from '../components'
+
 
 const Details = props => {
 
@@ -27,7 +31,8 @@ const Details = props => {
       return (
         <div className={'details'}>
           <h1>{info_node.name}</h1>
-          <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet=""/>
+          <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet="" />
+          <BinDetails />
         </div>
       );
     }
