@@ -5,7 +5,8 @@ import '../assets/styles/details.scss'
 import { userInfoContext } from '../store'
 
 //COMPONENTS
-import {BinDetails} from '../components'
+import { BinDetails } from '../components'
+import {EntranceHallDetails} from '../components'
 
 
 const Details = props => {
@@ -33,6 +34,15 @@ const Details = props => {
           <h1>{info_node.name}</h1>
           <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet="" />
           <BinDetails />
+        </div>
+      );
+    }
+  else if (node_actually === 'entranceHall') {
+      return (
+        <div className={'details'}>
+          <h1>{info_node.name}</h1>
+          <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet="" />
+          <EntranceHallDetails />
         </div>
       );
     }
