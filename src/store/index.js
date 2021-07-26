@@ -27,3 +27,6 @@
 import { createContext } from 'react'
 
 export const userInfoContext = createContext({}); 
+
+export const nameContext = createContext('')
+export const passwordContext = createContext('')

@@ -10,11 +10,11 @@ import {PeripheriqueCard} from '../components'
 const Home = () => {
 
   const {userInfo} = useContext(userInfoContext)
-
+  
   useEffect(() => {
-    console.log(userInfo.nodes);
-    
-  }, [userInfo]);
+
+  });
+
   return (
     <div className="home">
       <header>
@@ -24,8 +24,7 @@ const Home = () => {
       <p>Mes objets connectés</p>
       {
         Object.keys(userInfo.nodes).map( function (value, index) {
-          console.log(userInfo.nodes[value].name, index)
-          return <PeripheriqueCard key={index} title={userInfo.nodes[value].name} img={userInfo.nodes[value].name_img}/>
+          return <PeripheriqueCard key={index} path={userInfo.nodes[value].path} title={userInfo.nodes[value].name} img={userInfo.nodes[value].name_img}/>
         })
       }
       

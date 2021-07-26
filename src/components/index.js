@@ -5,3 +5,4 @@ export { default as PeripheriqueCard} from './PeripheriqueCard'
 // PAGES
 export { default as Login } from '../pages/Login'
 export { default as Home } from '../pages/Home'
+export { default as Details } from '../pages/Details'

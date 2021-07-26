@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Login, Home } from './components'
+import { Login, Home, Details } from './components'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { userInfoContext }  from './store'
 import './App.scss'
@@ -13,6 +13,7 @@ function App() {
 
         <Route path="/" exact component={Login}/>
         <Route path="/accueil" exact component={Home}/>
+        <Route path="/details/:node" exact component={Details}/>
       </Router>
     </userInfoContext.Provider>
     </div>

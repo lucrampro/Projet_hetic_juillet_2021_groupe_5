@@ -1,0 +1,13 @@
+@import './colors.scss';
+@import './general.scss';
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  img {
+    width: 40%;
+    margin: auto;
+  }
+}
