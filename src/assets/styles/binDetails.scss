@@ -5,10 +5,10 @@
 .bin-harvest{
   background: $dark-white;
   border-radius: 13px;
-  width: 309px;
-  height: 98px;
+  width: 90%;
+  height: 109px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   margin-top: 20px;
@@ -19,7 +19,7 @@
   }
 }
 .bin-details{
-  width: 309px;
+  width: 90%;
   height: 435px;
   background: $dark-white;
   border-radius: 11px;
@@ -27,7 +27,7 @@
 
 }
 .bin-text{
-  text-align: initial;
+  text-align: center;
   
 }
 .bin-details_content{

@@ -30,10 +30,10 @@ const data = {
 
 const BinDetails = () => (
   <>
-    <Doughnut data={data} />
+    <Doughnut data={data} className="doughnut"/>
     <div className="bin-harvest">
       <img src='/imgs/icons/icon-bin.png' alt="" srcSet="" className="bin-icon" />
-      <div>
+      <div className="bin-text">
         <h4 className="bin-harvest-title">Nouvelle collecte</h4>
         <h4>22/08/21</h4>
       </div>

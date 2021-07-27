@@ -11,15 +11,16 @@
     margin: auto;
   }
 }
-// EntranceHall details
-.details--entranceHall{
+
+.details--entranceHall, .details--bin{
   width: 90%;
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
   margin: 10px 0px;
-  #arrow{
+
+  #arrow {
     position: absolute;
     left: 15px;
     width: 15px !important;

@@ -1,4 +1,5 @@
-import React, {useContext, useEffect} from 'react';
+import React, { useContext, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 // STYLES
 import '../assets/styles/details.scss'
 // STORE
@@ -11,6 +12,7 @@ import {EntranceHallDetails} from '../components'
 
 
 const Details = props => {
+  let history = useHistory();
 
   const {userInfo} = useContext(userInfoContext);
   const path = props.location.pathname;
@@ -24,6 +26,10 @@ const Details = props => {
       console.log(response.data.data)
     })
     .catch(error => console.error(error))
+  }
+
+  const goToPreviousPath = () => {
+    history.goBack()
   }
 
     useEffect(() => {
@@ -41,11 +47,10 @@ const Details = props => {
     } else if (node_actually === 'bin') {
       return (
         <div className={'details'}>
-          <h3>{info_node.name}</h3>
-          {/* <div>
-            <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" className="details-arrow"/>
-            
-          </div> */}
+          <div className="details--bin">
+            <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" id="arrow" onClick={goToPreviousPath}/>
+            <h3>{info_node.name}</h3>
+          </div>
           <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet="" />
           <BinDetails />
         </div>
@@ -55,7 +60,7 @@ const Details = props => {
       return (
         <div className={'details'}>
           <div className="details--entranceHall">
-            <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" id="arrow"/>
+            <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" id="arrow" onClick={goToPreviousPath}/>
             <h3>{info_node.name}</h3>
           </div>
           <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet="" />
