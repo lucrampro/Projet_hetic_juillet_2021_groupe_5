@@ -2,9 +2,6 @@ import React from 'react';
 import '../assets/styles/info-card.scss'
 
 const InfoCard = ({info_node}) => {
-
-  console.log(info_node);
-  
   return (
     <div className="info--card">
       <img src="/imgs/icons/mailbox_icon.png" alt=""/>
