@@ -42,7 +42,12 @@ const Details = props => {
 
     if (node_actually_path === 'mailbox') {
         return (
+          
           <div className={'details'}>
+                      <div className="details--entranceHall">
+            <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" id="arrow" onClick={goToPreviousPath}/>
+            <h3>{info_node_firebase.name}</h3>
+          </div>
             <MailBoxDetails name={info_node_firebase.name} img_path={info_node_firebase.name_img} info_node={info_node_influx}/>
           </div>
         );
@@ -54,7 +59,7 @@ const Details = props => {
             <h3>{info_node_firebase.name}</h3>
           </div>
           <img src={`/imgs/nodes/${info_node_firebase.name_img}.png`} alt="" srcSet="" />
-          <BinDetails />
+          <BinDetails info_node={info_node_influx} />
         </div>
       );
     }
