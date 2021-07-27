@@ -4,7 +4,7 @@ import { Bar } from 'react-chartjs-2';
 import '../assets/styles/barChart.scss'
 
 // MODIFICATION VIA LES CAPTEURS
-let dataInfluxDb = 8
+let dataInfluxDb = 9
 
 const data = {
   labels: ['lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'],

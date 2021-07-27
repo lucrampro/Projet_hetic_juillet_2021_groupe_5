@@ -1,5 +1,5 @@
-import React, { useContext, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
+import React, {useContext, useEffect, useState} from 'react';
 // STYLES
 import '../assets/styles/details.scss'
 // STORE
@@ -8,7 +8,7 @@ import { userInfoContext } from '../store'
 import Axios from 'axios'
 //COMPONENTS
 import { BinDetails } from '../components'
-import {EntranceHallDetails} from '../components'
+import {EntranceHallDetails, MailBoxDetails} from '../components'
 
 
 const Details = props => {
@@ -16,14 +16,17 @@ const Details = props => {
 
   const {userInfo} = useContext(userInfoContext);
   const path = props.location.pathname;
-  const node_actually = path.slice(9, path.length);
-  const info_node = userInfo.nodes[node_actually];
+  const node_actually_path = path.slice(9, path.length);
+  const info_node_firebase = userInfo.nodes[node_actually_path];
+  const [info_node_influx, setinfo_node_influx] = useState([]);
 
   const getNodeInfluxInformation = () => {
-    // mailbox_node
-    Axios.get(`http://localhost:3001/influx/${info_node.route}`)
+    // get info apis
+    Axios.get(`http://localhost:3001/influx/${info_node_firebase.route}`)
     .then(response => {
-      console.log(response.data.data)
+      setinfo_node_influx(response.data.data);
+      console.log(response.data.data);
+      
     })
     .catch(error => console.error(error))
   }
@@ -35,36 +38,45 @@ const Details = props => {
     useEffect(() => {
       
       getNodeInfluxInformation();
-    });
+    }, []);
 
-    if (node_actually === 'mailbox') {
+    if (node_actually_path === 'mailbox') {
         return (
+          
           <div className={'details'}>
-            <h1>{info_node.name}</h1>
-            <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet=""/>
+                      <div className="details--entranceHall">
+            <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" id="arrow" onClick={goToPreviousPath}/>
+            <h3>{info_node_firebase.name}</h3>
+          </div>
+            <MailBoxDetails name={info_node_firebase.name} img_path={info_node_firebase.name_img} info_node={info_node_influx}/>
           </div>
         );
-    } else if (node_actually === 'bin') {
+    } else if (node_actually_path === 'bin') {
       return (
         <div className={'details'}>
           <div className="details--bin">
             <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" id="arrow" onClick={goToPreviousPath}/>
-            <h3>{info_node.name}</h3>
+            <h3>{info_node_firebase.name}</h3>
           </div>
-          <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet="" />
-          <BinDetails />
+          <img src={`/imgs/nodes/${info_node_firebase.name_img}.png`} alt="" srcSet="" />
+          <BinDetails info_node={info_node_influx} />
         </div>
       );
     }
-  else if (node_actually === 'entranceHall') {
+  else if (node_actually_path === 'entranceHall') {
       return (
         <div className={'details'}>
           <div className="details--entranceHall">
             <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" id="arrow" onClick={goToPreviousPath}/>
-            <h3>{info_node.name}</h3>
+            <h3>{info_node_firebase.name}</h3>
           </div>
+<<<<<<< HEAD
           <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet="" />
           <EntranceHallDetails route={ node_actually }/>
+=======
+          <img src={`/imgs/nodes/${info_node_firebase.name_img}.png`} alt="" srcSet="" />
+          <EntranceHallDetails />
+>>>>>>> 30f65b71b6ca8fc0d41ebdd947f1ed087d1b5828
         </div>
       );
     }

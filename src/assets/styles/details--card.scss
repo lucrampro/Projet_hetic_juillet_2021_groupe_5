@@ -1,0 +1,13 @@
+@import './general.scss';
+
+.details--card {
+  width: 100%;
+
+  .date_node {
+    font-weight: bold;
+  }
+  .action, .hours_node {
+    font-size: $t-md;
+    margin: 0px;
+  }
+}
