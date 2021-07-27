@@ -1,25 +1,13 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react';
+// STYLE
+import '../assets/styles/button.scss'
 
-function ButtonComponent () {
-
-    function handleClick() {
-       setName('lucien')
-    }
-
-    // js
-    var [name, setName] = useState('wakid');
-
-    useEffect(() => {
-      console.log(name);
-      
-    }, [name]);
-    return (
-    // template 
-    <button onClick={handleClick}>{name}</button>
-    );
-  
+const ButtonComponent = (props) => {
+  return (
+    <div className="button--component">
+      <button onClick={() => console.log('tata')}>{props.text ? props.text : "default text"}</button>
+    </div>
+  );
 }
 
 export default ButtonComponent;
-
-

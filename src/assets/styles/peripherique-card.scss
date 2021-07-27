@@ -1,0 +1,21 @@
+@import './colors.scss';
+
+.peripherique--card {
+  height: 405px;
+  width: 310px;
+  border-radius: 20px;
+  background-color: $dark-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  button {
+    border: none;
+    background: none;
+  }
+
+  img {
+    width: 60%;
+  }
+}

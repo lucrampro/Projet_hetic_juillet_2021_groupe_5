@@ -1,0 +1,16 @@
+@import './assets/styles/colors.scss';
+@import './assets/styles/general.scss';
+
+.App {
+  color: $grey;
+
+}
+
+h1 {
+  font: $t-xl;
+  color: $blue;
+}
+
+button {
+  color: $grey;
+}

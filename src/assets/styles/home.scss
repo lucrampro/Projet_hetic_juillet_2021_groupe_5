@@ -1,0 +1,35 @@
+@import './general.scss';
+
+.home {
+  
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  >p {
+    font: $t-lg;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .peripherique--card {
+    margin: 10px 0px;
+    &:active{
+      background-color: #4B80E8;
+      color: white;
+    }
+  }
+}
+
+// DISPLAY NONE FOR THE MOMENT
+#stairs, #door{
+  display: none;
+}
