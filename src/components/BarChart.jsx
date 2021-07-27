@@ -2,7 +2,9 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2';
 // STYLES
 import '../assets/styles/barChart.scss'
+import { useHistory } from 'react-router-dom'
 
+const BarChart = () => {
 // MODIFICATION VIA LES CAPTEURS
 let dataInfluxDb = 9
 
@@ -45,16 +47,23 @@ const options = {
   },
 };
 
-const BarChart = () => (
-  <>
-    <div className="details--barchart">
-      <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" id="arrow" />
-      <h3>Hall</h3>
-    </div>
-    <Bar data={data} options={options}  className="barchart"/>
-  </>
-);
+  const history = useHistory();
+  const goToPreviousPath = () => {
+    history.goBack()
+  }
+
+  return (
+    <>
+      <div className="details--barchart">
+        <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" id="arrow" onClick={ goToPreviousPath }/>
+        <h3>Hall</h3>
+      </div>
+      <Bar data={data} options={options} className="barchart"/>
+    </>
+  );
+}
 
 export default BarChart;
+
 
 

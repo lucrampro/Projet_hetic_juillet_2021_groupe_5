@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <p>Mes objets connectés</p>
+      <h2>Mes objets connectés</h2>
       {
         Object.keys(userInfo.nodes).map( function (value, index) {
           return <PeripheriqueCard key={index} path={userInfo.nodes[value].path} title={userInfo.nodes[value].name} img={userInfo.nodes[value].name_img} id={userInfo.nodes[value].name_img}/>
