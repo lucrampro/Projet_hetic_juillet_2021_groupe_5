@@ -30,7 +30,7 @@ const data = {
 
 const BinDetails = () => (
   <>
-    <Doughnut data={data} />
+    <Doughnut data={data} className="doughnut"/>
     <div className="bin-harvest">
       <img src='/imgs/icons/icon-bin.png' alt="" srcSet="" className="bin-icon" />
       <div>
