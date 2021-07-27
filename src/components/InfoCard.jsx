@@ -9,8 +9,7 @@ const InfoCard = ({info_node}) => {
     <div className="info--card">
       <img src="/imgs/icons/mailbox_icon.png" alt=""/>
       <div>
-        <p className="title--info">Ouverture</p>
-        <p className="info">{info_node._value}</p>
+        <p className="info">{info_node._value === 1 ? 'Vous avez du courrier' : 'Vous n\'avez pas de courrier'}</p>
       </div>
     </div>
   );
