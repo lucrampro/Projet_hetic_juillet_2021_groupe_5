@@ -14,14 +14,6 @@ function App() {
           <Route path="/" exact component={Login} />
           <Route path="/accueil" exact component={Home} />
           <Route path="/details/:node" exact component={Details} />
-    <userInfoContext.Provider value={{userInfo ,setuserInfo}}>
-      <Router>
-
-        <Route path="/" exact component={Login}/>
-        <Route path="/accueil" exact component={Home}/>
-        <Route path="/details/:node" exact component={Details}/>
-      </Router>
-    </userInfoContext.Provider>
           <Route path="/notifications" exact component={Notifications} />
         </Router>
       </userInfoContext.Provider>
