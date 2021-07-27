@@ -12,6 +12,7 @@ const history = useHistory();
 
 const actually_hall = userInfo.nodes.entranceHall.name_img
 
+
 const gotoHallDetails = () => {
   history.push(`/lieux-commun/${actually_hall}`)
 }

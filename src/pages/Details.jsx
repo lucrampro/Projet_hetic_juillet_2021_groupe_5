@@ -23,22 +23,14 @@ const Details = props => {
   const getNodeInfluxInformation = () => {
     // get info apis
     Axios.get(`http://localhost:3001/influx/${info_node_firebase.route}`)
-    .then(response => {
-      setinfo_node_influx(response.data.data);
-      console.log(response.data.data);
-      
-    })
+    .then(response => setinfo_node_influx(response.data.data))
     .catch(error => console.error(error))
   }
 
   const goToPreviousPath = () => {
     history.goBack()
   }
-
-    useEffect(() => {
-      
-      getNodeInfluxInformation();
-    }, []);
+    useEffect(() => getNodeInfluxInformation())
 
     if (node_actually_path === 'mailbox') {
         return (
@@ -71,7 +63,7 @@ const Details = props => {
             <h3>{info_node_firebase.name}</h3>
           </div>
           <img src={`/imgs/nodes/${info_node_firebase.name_img}.png`} alt="" srcSet="" />
-          <EntranceHallDetails />
+          <EntranceHallDetails info_node={info_node_influx} />
         </div>
       );
     }
