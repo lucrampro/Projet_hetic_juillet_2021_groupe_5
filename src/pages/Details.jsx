@@ -70,13 +70,8 @@ const Details = props => {
             <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" id="arrow" onClick={goToPreviousPath}/>
             <h3>{info_node_firebase.name}</h3>
           </div>
-<<<<<<< HEAD
-          <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet="" />
-          <EntranceHallDetails route={ node_actually }/>
-=======
           <img src={`/imgs/nodes/${info_node_firebase.name_img}.png`} alt="" srcSet="" />
           <EntranceHallDetails />
->>>>>>> 30f65b71b6ca8fc0d41ebdd947f1ed087d1b5828
         </div>
       );
     }

@@ -7,6 +7,7 @@ export { default as EntranceHallDetails} from './EntranceHallDetails'
 export { default as MailBoxDetails} from './MailBoxDetails'
 export { default as InfoCard} from './InfoCard'
 export { default as DetailsCard} from './DetailsCard'
+export { default as BarChart} from './BarChart'
 // PAGES
 export { default as Login } from '../pages/Login'
 export { default as Home } from '../pages/Home'
