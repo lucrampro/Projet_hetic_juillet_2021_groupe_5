@@ -29,9 +29,7 @@ const Notifications = () => {
             <h4>12:40</h4>
           </div>
         })
-
       }
-      
     </div>
   );
 }

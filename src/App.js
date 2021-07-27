@@ -13,13 +13,12 @@ function App() {
     <div className="App">
       <userInfoContext.Provider value={{ userInfo, setuserInfo }}>
         <Router>
-          <Header />
           <Route path="/" exact component={Login} />
+          <Header />
           <Route path="/accueil" exact component={Home} />
           <Route path="/lieux-commun/:type" exact component={BarChart} />
           <Route path="/details/:node" exact component={Details} />
           <Route path="/notifications" exact component={Notifications} />
-
         </Router>
       </userInfoContext.Provider>
     </div>

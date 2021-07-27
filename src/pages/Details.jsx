@@ -44,7 +44,7 @@ const Details = props => {
         return (
           
           <div className={'details'}>
-                      <div className="details--entranceHall">
+            <div className="details--entranceHall">
             <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" id="arrow" onClick={goToPreviousPath}/>
             <h3>{info_node_firebase.name}</h3>
           </div>

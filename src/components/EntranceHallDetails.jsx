@@ -13,12 +13,10 @@ const history = useHistory();
 const actually_hall = userInfo.nodes.entranceHall.name_img
 
 const gotoHallDetails = () => {
-
   history.push(`/lieux-commun/${actually_hall}`)
 }
-
   return (
-    <div>
+    <div className="buttons">
       <button onClick={gotoHallDetails} className="peripherique--menu" style={{ margin: "5%" }}>
         <img src='/imgs/icons/icon-bin.png' alt="" srcSet="" className="peripherique--img" />
         <p>Hall</p>
