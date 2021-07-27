@@ -12,3 +12,17 @@
   }
 }
 // Bin details
+// Bin details
+.details--bin {
+  width: 90%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+  #arrow {
+    position: absolute;
+    left: 15px;
+    width: 15px !important;
+  }
+}
