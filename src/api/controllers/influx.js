@@ -1,6 +1,6 @@
 const {InfluxDB} = require('@influxdata/influxdb-client')
 var url = "http://localhost:8086"
-var token = "k6Xsy_QHlfqnwkBJQR9kx5B7QoiN_Bz8XtDcOgq76HZtYXDJ5uBI1BIbFm0Pxor4VlRLqyZB7jrZQR9hhDRGcA=="
+var token = "UboVuGFVHlfH-GL9JVMZAthoqlkeMHf-PoND0yv-P4tx3MB3-2CxcSeBCim3qSag5suMGOflt78f5Y13xAeNqg=="
 var org = "heticprojet"
 
 exports.getBinWeight = (req,res,next) => {
