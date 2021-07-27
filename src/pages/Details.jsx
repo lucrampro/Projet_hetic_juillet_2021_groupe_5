@@ -51,9 +51,9 @@ const Details = props => {
         <div className={'details'}>
           <div className="details--bin">
             <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" id="arrow" onClick={goToPreviousPath}/>
-            <h3>{info_node.name}</h3>
+            <h3>{info_node_firebase.name}</h3>
           </div>
-          <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet="" />
+          <img src={`/imgs/nodes/${info_node_firebase.name_img}.png`} alt="" srcSet="" />
           <BinDetails />
         </div>
       );
@@ -63,9 +63,9 @@ const Details = props => {
         <div className={'details'}>
           <div className="details--entranceHall">
             <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" id="arrow" onClick={goToPreviousPath}/>
-            <h3>{info_node.name}</h3>
+            <h3>{info_node_firebase.name}</h3>
           </div>
-          <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet="" />
+          <img src={`/imgs/nodes/${info_node_firebase.name_img}.png`} alt="" srcSet="" />
           <EntranceHallDetails />
         </div>
       );
