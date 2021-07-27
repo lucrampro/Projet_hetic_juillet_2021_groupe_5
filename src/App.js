@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { userInfoContext }  from './store'
 import './App.scss'
 import Notifications from './pages/Notifications'
-import {BarChart} from './components'
+import { BarChart } from './components'
+import { Header } from "./components";
 
 function App() {
   const [userInfo, setuserInfo] = useState('');
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
       <userInfoContext.Provider value={{ userInfo, setuserInfo }}>
         <Router>
+          <Header />
           <Route path="/" exact component={Login} />
           <Route path="/accueil" exact component={Home} />
           <Route path="/lieux-commun/:type" exact component={BarChart} />

@@ -22,10 +22,6 @@ const Home = () => {
 
   return (
     <div className="home">
-      <header>
-        <h1>SecuHome</h1>
-        <img src='/imgs/notification_icon.png' alt="" srcSet="" onClick={goToNotificationPage}/>
-      </header>
       <p>Mes objets connectés</p>
       {
         Object.keys(userInfo.nodes).map( function (value, index) {
