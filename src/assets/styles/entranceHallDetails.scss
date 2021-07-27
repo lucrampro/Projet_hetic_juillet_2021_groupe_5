@@ -1,0 +1,30 @@
+@import "./colors.scss";
+
+.peripherique--menu {
+  height: 70px;
+  width: 90%;
+  border-radius: 20px;
+  background-color: $dark-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .peripherique--img {
+    width: 29px !important;
+  }
+  .img--arrow{
+    width: 15px;
+    transform: rotate(180deg);
+  }
+
+  p {
+  font-size: 18px;
+  font-weight: bold;
+}
+  button {
+    border: none;
+    background: none;
+    display: flex;
+  }
+
+  
+}
