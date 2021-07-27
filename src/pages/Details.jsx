@@ -64,7 +64,7 @@ const Details = props => {
             <h3>{info_node.name}</h3>
           </div>
           <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet="" />
-          <EntranceHallDetails />
+          <EntranceHallDetails route={ node_actually }/>
         </div>
       );
     }
