@@ -19,7 +19,7 @@ const Details = props => {
 
   const getNodeInfluxInformation = () => {
     // mailbox_node
-    Axios.get("http://localhost:3001/influx/getMailboxState")
+    Axios.get(`http://localhost:3001/influx/${info_node.route}`)
     .then(response => {
       console.log(response.data.data)
     })
