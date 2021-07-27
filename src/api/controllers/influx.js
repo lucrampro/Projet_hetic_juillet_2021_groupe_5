@@ -97,5 +97,20 @@ exports.getEntranceHallState = (req,res,next) => {
 
 exports.binAlert = (req,res,next) => {
   console.log(req.body)
-  res.status(201).json({ notification : 'full trash can'})
+  console.log('notif bin')
+  //res.status(201).json({ notification : 'full trash can'})
+}
+
+exports.staircaseAlert = (req,res,next) => {
+  console.log(req.body)
+  console.log('notif staircase')
+}
+
+exports.entrancehallAlert = (req,res,next) => {
+  console.log(req.body)
+  console.log('notif entrance hall')
+}
+exports.mailboxAlert = (req,res,next) => {
+  console.log(req.body)
+  console.log('notif mailbox')
 }

@@ -7,6 +7,9 @@ router.get('/getMailboxState', influxController.getMailboxState)
 router.get('/getStaircaseState', influxController.getStaircaseState)
 router.get('/getEntranceHallState', influxController.getEntranceHallState)
 router.post('/bin-alert', influxController.binAlert)
+router.post('/staircase-alert', influxController.staircaseAlert)
+router.post('/entrancehall-alert', influxController.entrancehallAlert)
+router.post('/mailbox-alert', influxController.mailboxAlert)
 
 
 module.exports = router

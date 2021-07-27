@@ -10,7 +10,7 @@ import { Header } from "./components";
 function App() {
   const [userInfo, setuserInfo] = useState('');
   return (
-    <div className="App">
+    <div className="App">/
       <userInfoContext.Provider value={{ userInfo, setuserInfo }}>
         <Router>
           <Route path="/" exact component={Login} />
