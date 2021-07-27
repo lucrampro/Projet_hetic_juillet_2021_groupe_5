@@ -5,12 +5,16 @@ import '../assets/styles/binDetails.scss'
 // STORE
 import { Doughnut } from 'react-chartjs-2';
 
+const dataBin = 80
+
+const dataArray = ["test", "test"]
+
 const data = {
-  labels: ['Remplissage poubelle'],
+  labels: [`Remplissage poubelle ${dataBin}%`],
   datasets: [
     {
       label: '# of Votes',
-      data: [80, 20],
+      data: [dataBin, 20],
       backgroundColor: [
         'rgba(54, 162, 235, 0.2)',
         'white',
@@ -28,11 +32,24 @@ const BinDetails = () => (
   <>
     <Doughnut data={data} />
     <div className="bin-harvest">
-      <h4 className="bin-harvest-title">Nouvelle collecte</h4>
-      <h4>22/08/21</h4>
+      <img src='/imgs/icons/icon-bin.png' alt="" srcSet="" className="bin-icon" />
+      <div>
+        <h4 className="bin-harvest-title">Nouvelle collecte</h4>
+        <h4>22/08/21</h4>
+      </div>
     </div>
     <h4>Détails</h4>
-    <div className="bin-details"></div> 
+    <div className="bin-details">
+      {
+        dataArray.map(item => <div className="bin-details_content">
+          <h3 className="bin-text">Vendredi 20 juillet</h3>
+          <div className="bin-text flex">
+            <p className="text">Collecte poubelle</p>
+            <p>12:40</p>
+          </div>
+        </div>)
+      }
+    </div>
   </>
 );
 
