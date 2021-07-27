@@ -1,0 +1,27 @@
+@import "./colors.scss";
+
+.peripherique--menu {
+  height: 70px;
+  width: 300px;
+  border-radius: 20px;
+  background-color: $dark-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+  button {
+    border: none;
+    background: none;
+    
+  }
+
+  img {
+    width: 60%;
+  }
+}
