@@ -30,7 +30,8 @@ const Details = props => {
     } else if (node_actually === 'bin') {
       return (
         <div className={'details'}>
-          <h1>{info_node.name}</h1>
+          <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" className="details-arrow"/>
+          <h3>{info_node.name}</h3>
           <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet="" />
           <BinDetails />
         </div>
