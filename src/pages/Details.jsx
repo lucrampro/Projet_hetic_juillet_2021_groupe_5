@@ -54,7 +54,10 @@ const Details = props => {
   else if (node_actually === 'entranceHall') {
       return (
         <div className={'details'}>
-          <h1>{info_node.name}</h1>
+          <div className="details--entranceHall">
+            <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" id="arrow"/>
+            <h3>{info_node.name}</h3>
+          </div>
           <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet="" />
           <EntranceHallDetails />
         </div>
