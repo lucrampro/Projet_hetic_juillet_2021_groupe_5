@@ -42,10 +42,10 @@ const BinDetails = () => (
     <div className="bin-details">
       {
         dataArray.map(item => <div className="bin-details_content">
-          <h3 className="bin-text">Vendredi 20 juillet</h3>
+          {/* <h3 className="bin-text">{ new Date().toLocaleString() }</h3> */}
           <div className="bin-text flex">
             <p className="text">Collecte poubelle</p>
-            <p>12:40</p>
+            <p>{ new Date().toLocaleString() }</p>
           </div>
         </div>)
       }
