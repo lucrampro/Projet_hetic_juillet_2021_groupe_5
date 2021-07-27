@@ -56,16 +56,8 @@ const Details = props => {
   else if (node_actually_path === 'entranceHall') {
       return (
         <div className={'details'}>
-<<<<<<< HEAD
           <h1>{info_node_firebase.name}</h1>
           <img src={`/imgs/nodes/${info_node_firebase.name_img}.png`} alt="" srcSet="" />
-=======
-          <div className="details--entranceHall">
-            <img src='/imgs/icons/arrow-back.png' alt="" srcSet="" id="arrow"/>
-            <h3>{info_node.name}</h3>
-          </div>
-          <img src={`/imgs/nodes/${info_node.name_img}.png`} alt="" srcSet="" />
->>>>>>> 2a02dbc0251e2d42b168c5256d593b5d3b745251
           <EntranceHallDetails />
         </div>
       );
