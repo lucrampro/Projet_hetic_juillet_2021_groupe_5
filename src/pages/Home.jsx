@@ -23,11 +23,13 @@ const Home = () => {
   return (
     <div className="home">
       <h2>Mes objets connectés</h2>
+      <div className="wrapper--cards--nodes">
       {
         Object.keys(userInfo.nodes).map( function (value, index) {
           return <PeripheriqueCard key={index} path={userInfo.nodes[value].path} title={userInfo.nodes[value].name} img={userInfo.nodes[value].name_img} id={userInfo.nodes[value].name_img}/>
         })
       }
+      </div>
       
     </div>
   );

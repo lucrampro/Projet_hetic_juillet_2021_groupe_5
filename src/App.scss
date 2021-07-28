@@ -3,7 +3,12 @@
 
 .App {
   color: $grey;
-
+  @media screen and (min-width: 1280px){
+    
+    background-image: url('./assets/styles/imgs/bg.png');
+    background-size: 100%;
+    background-position: 10%;
+  }
 }
 
 h1 {
