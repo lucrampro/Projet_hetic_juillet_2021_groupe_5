@@ -13,7 +13,7 @@ const MailBoxDetails = ({ name, img_path, info_node }) => {
         <InfoCard info_node={info_node}/>
         <p>Détails</p>
         <div className="wrapper--details">
-          <DetailsCard info_node={info_node}/>
+          <DetailsCard action_text={'Boite aux lettres ouvertes'} info_node={info_node}/>
         </div>
       </div>
     </div>

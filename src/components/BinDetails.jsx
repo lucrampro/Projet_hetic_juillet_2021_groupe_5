@@ -17,6 +17,8 @@ const BinDetails = ({info_node}) => {
     setWeight(info_node._value);
   });
 
+  
+
   let date_action = new Date(time_action).toLocaleDateString();
   const bin_weight = weight > 0 ? weight.toFixed() : 0;
   const dataBin = bin_weight*100/600
@@ -26,10 +28,11 @@ const BinDetails = ({info_node}) => {
     datasets: [
       {
         label: '# of Votes',
-        data: [dataBin, 20],
+        data: [dataBin, 100 - dataBin],
         backgroundColor: [
           'rgba(54, 162, 235, 0.2)',
-          'white',
+          'rgba(54, 162, 235, 0.2)',
+          
         ],
         borderColor: [
           'rgba(54, 162, 235, 0.2)',
@@ -53,7 +56,7 @@ const BinDetails = ({info_node}) => {
     <h4>Détails</h4>
     <div className="bin-details">
         <div className="wrapper--details">
-          <DetailsCard info_node={info_node}/>
+          <DetailsCard action_text={"Poubelle recuperer"} info_node={info_node}/>
         </div>
     </div>
     </div>
