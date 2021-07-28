@@ -45,8 +45,8 @@ const BinDetails = ({info_node}) => {
 
   return (
     <div>
-    <Doughnut data={data} className="doughnut"/>
-    <div className="bin-harvest">
+      <h3>Poubelle remplie a {dataBin}%</h3>
+      <div className="bin-harvest">
       <img src='/imgs/icons/icon-bin.png' alt="" srcSet="" className="bin-icon" />
       <div className="bin-text">
         <h4 className="bin-harvest-title">Nouvelle collecte</h4>
